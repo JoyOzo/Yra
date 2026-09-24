@@ -1,0 +1,122 @@
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.container {
+  width: min(1120px, 92%);
+  min-height: 78px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #13313d;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f5a623;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name strong {
+  font-size: 15px;
+  color: #13313d;
+}
+
+.brand-name span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e46f32;
+  margin-top: 3px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #13313d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #1f86a5;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 17px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn-secondary {
+  border: 1px solid #1f5968;
+  color: #1f5968;
+  background: #ffffff;
+}
+
+.btn-primary {
+  border: 1px solid #e9793b;
+  color: #ffffff;
+  background: #e9793b;
+}
+
+.btn-secondary:hover {
+  background: #f3f8f9;
+}
+
+.btn-primary:hover {
+  background: #d9672d;
+}

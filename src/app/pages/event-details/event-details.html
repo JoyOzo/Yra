@@ -1,0 +1,55 @@
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Event details</div>
+    <h1>{{ event.detailTitle }}</h1>
+<p>{{ event.description }}</p>
+<p>Event type: {{ eventType }}</p>
+<p>Mode: {{ eventMode }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <span class="badge">{{ event.category }}</span>
+
+      <h2>{{ event.detailTitle }}</h2>
+
+      <div class="meta">
+  {{ event.fullDate }} · {{ event.mode }} · {{ event.duration }}
+</div>
+
+     @if (event.fee) {
+  <p>Registration fee: <b>{{ event.fee }}</b></p>
+}
+
+      <form class="form">
+  <div class="grid2">
+    <div class="field">
+      <label>Full name</label>
+      <input required placeholder="Your full name">
+    </div>
+
+    <div class="field">
+      <label>Email</label>
+      <input required type="email" placeholder="you@example.com">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Institution</label>
+    <input placeholder="University / Organisation">
+  </div>
+
+  <div class="field">
+    <label>Research area</label>
+    <input placeholder="e.g. Science Education">
+  </div>
+
+  <button class="btn btn-primary" type="submit">
+    Continue to registration &amp; payment →
+  </button>
+</form>
+    </div>
+  </div>
+</section>

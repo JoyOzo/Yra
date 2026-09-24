@@ -1,0 +1,60 @@
+<section class="login-page">
+
+  <div class="login-card">
+
+    <div class="eyebrow">YRA ACCOUNT</div>
+
+    <h1>Welcome back</h1>
+
+    <p>Sign in to access your member dashboard.</p>
+
+    <form>
+
+      <div class="field">
+        <label for="email">Email address</label>
+
+        <input
+          id="email"
+          type="email"
+          placeholder="you@example.com"
+          [formField]="loginForm.email"
+        >
+
+        @if (loginForm.email().touched() && loginForm.email().invalid()) {
+          <small>Please enter a valid email address.</small>
+        }
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+          [formField]="loginForm.password"
+        >
+
+        @if (loginForm.password().touched() && loginForm.password().invalid()) {
+          <small>Password is required.</small>
+        }
+      </div>
+
+      <label class="remember">
+        <input type="checkbox">
+        <span>Remember me</span>
+      </label>
+
+      <button type="submit" class="btn btn-primary">
+        Sign in
+      </button>
+
+    </form>
+
+    <p class="create-account">
+      New to YRA? <a href="#">Create an account</a>
+    </p>
+
+  </div>
+
+</section>

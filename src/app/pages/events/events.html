@@ -1,0 +1,67 @@
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Stay connected</div>
+    <h1>Events &amp; Training</h1>
+    <p>Register for upcoming YRA programmes or explore the training archive.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Upcoming</div>
+        <h2>Registration is open</h2>
+      </div>
+    </div>
+
+    <div class="grid3">
+
+      @for (event of events; track event.id) {
+        <div class="card event-card">
+
+          <div class="event-img" [class.orange-img]="event.id === 2">
+            {{ event.category }}
+          </div>
+
+          <div class="event-body">
+
+            <span
+              class="badge"
+              [class.orange]="event.id === 2"
+            >
+              {{ event.id === 1 ? 'Training' : event.id === 2 ? 'Seminar' : 'Workshop' }}
+            </span>
+
+            <h3>{{ event.title }}</h3>
+
+            <div class="meta">
+              {{ event.date }} · {{ event.mode }} · {{ event.duration }}
+            </div>
+
+            @if (event.id === 1) {
+              <p>Registration fee: <b>{{ event.fee }}</b></p>
+            } @else {
+              <p>{{ event.description }}</p>
+            }
+
+            <button
+              class="btn"
+              [class.btn-primary]="event.id === 1"
+              [class.btn-secondary]="event.id !== 1"
+               [routerLink]="['/events', event.id]"
+               [queryParams]="{ type: event.category, mode: event.mode }"
+              type="button"
+            >
+              {{ event.id === 1 ? 'Register now' : 'View details' }}
+            </button>
+
+          </div>
+        </div>
+      }
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,131 @@
+:host {
+  display: block;
+  min-height: calc(100vh - 78px);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #13313d;
+}
+
+.login-page {
+  min-height: calc(100vh - 78px);
+  background: #f5f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: min(480px, 100%);
+  background: #ffffff;
+  border: 1px solid #dce6e9;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(19, 49, 61, 0.08);
+  box-sizing: border-box;
+}
+
+.eyebrow {
+  color: #e97936;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.login-card h1 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  margin: 0 0 8px;
+  color: #13313d;
+}
+
+.login-card > p {
+  color: #6b7b82;
+  margin: 0 0 25px;
+}
+
+.login-card form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cfdadd;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.field input:focus {
+  border-color: #e9793b;
+  box-shadow: 0 0 0 3px rgba(31, 134, 165, 0.1);
+}
+
+.field small {
+  color: #c94b3c;
+  font-size: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #e9793b;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #d9672d;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6b7b82;
+  cursor: pointer;
+}
+
+.remember input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.create-account {
+  margin: 25px 0 0;
+  font-size: 13px;
+  color: #e9793b;
+}
+
+.create-account a {
+  color: #1f5968;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
